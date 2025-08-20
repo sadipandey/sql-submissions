@@ -1,0 +1,630 @@
+Question Details:
+
+  Title: Employee Names
+  Slug: name-of-employees
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Print employee names.
+  Problem Statement: Write a query that prints a list of employee names (i.e.: the _name_ attribute) from the **Employee** table in alphabetical order.
+  Constraints:  
+  Input Format: The **Employee** table containing employee data for a company is described as follows: 
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/19629/1458557872-4396838885-ScreenShot2016-03-21at4.27.13PM.png"/>
+
+where _employee\_id_ is an employee's ID number, _name_ is their name, _months_ is the total number of months they've been working for the company, and _salary_ is their monthly salary.
+  Output Format:  
+  
+My submission:
+SELECT NAME 
+
+FROM EMPLOYEE
+
+ORDER BY NAME ASC
+
+----------------------
+
+Question Details:
+
+  Title: Higher Than 75 Marks
+  Slug: more-than-75-marks
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the names of students scoring higher than 75 Marks. Sort the output by the LAST three characters of each name.
+  Problem Statement: Query the *Name* of any student in **STUDENTS** who scored higher than $75$ *Marks*. Order your output by the *last three characters* of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending *ID*.
+  Constraints:  
+  Input Format: The **STUDENTS** table is described as follows:
+<img src="https://s3.amazonaws.com/hr-challenge-images/12896/1443815243-94b941f556-1.png" />
+The *Name* column only contains uppercase (`A`-`Z`) and lowercase (`a`-`z`) letters.
+  Output Format:  
+  
+My submission:
+SELECT NAME
+
+FROM STUDENTS
+
+WHERE MARKS > 75
+    ORDER BY RIGHT(NAME,3), ID
+
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 12
+  Slug: weather-observation-station-12
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query an alphabetically ordered list of CITY names not starting and ending with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that *do not start* with vowels and *do not end* with vowels. Your result cannot contain duplicates.
+
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT CITY
+
+FROM STATION
+
+WHERE LEFT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+    AND RIGHT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+
+
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 12
+  Slug: weather-observation-station-12
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query an alphabetically ordered list of CITY names not starting and ending with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that *do not start* with vowels and *do not end* with vowels. Your result cannot contain duplicates.
+
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT CITY
+
+FROM STATION
+
+WHERE LEFT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+    AND RIGHT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+
+
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 11
+  Slug: weather-observation-station-11
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names not starting or ending with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT CITY
+
+FROM STATION
+
+WHERE LEFT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+    OR
+    RIGHT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 11
+  Slug: weather-observation-station-11
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names not starting or ending with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT CITY
+
+FROM STATION
+
+WHERE LEFT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+    OR
+    RIGHT(UPPER(City), 1) NOT IN ('A','E','I','O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 10
+  Slug: weather-observation-station-10
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names not ending in vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that *do not end* with vowels. Your result cannot contain duplicates.
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT CITY
+FROM STATION 
+WHERE RIGHT(UPPER(CITY), 1) NOT IN ('A', 'E', 'I', 'O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 9
+  Slug: weather-observation-station-9
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query an alphabetically ordered list of CITY names not starting with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that *do not start* with vowels. Your result cannot contain duplicates.
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+*/
+SELECT DISTINCT City
+FROM Station
+WHERE LEFT(UPPER(City),1) NOT IN ('A','E','I','O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 9
+  Slug: weather-observation-station-9
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query an alphabetically ordered list of CITY names not starting with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** that *do not start* with vowels. Your result cannot contain duplicates.
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude. 
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+Please append a semicolon ";" at the end of the query and enter your query in a single line to avoid error.
+*/
+SELECT DISTINCT City
+FROM Station
+WHERE LEFT(UPPER(City),1) NOT IN ('A','E','I','O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 8
+  Slug: weather-observation-station-8
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query CITY names that start AND end with vowels.
+  Problem Statement: Query the list of *CITY* names from **STATION** which have vowels (i.e., *a*, *e*, *i*, *o*, and *u*) as both their first *and* last characters. Your result cannot contain duplicates.
+
+  Constraints:  
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+SELECT DISTINCT City
+FROM Station
+WHERE LEFT(UPPER(City), 1) IN ('A','E','I','O','U')
+AND RIGHT(UPPER(City), 1) IN ('A','E','I','O','U')
+
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 7
+  Slug: weather-observation-station-7
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION.
+  Problem Statement: Query the list of *CITY* names ending with vowels (a, e, i, o, u) from **STATION**. Your result *cannot* contain duplicates.
+
+  Constraints: N/A
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+
+SELECT DISTINCT City FROM Station 
+WHERE SUBSTRING(LOWER(City), LENGTH(City), 1) IN ('a','e','i','o','u')
+
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 6
+  Slug: weather-observation-station-6
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names beginning with vowels (a, e, i, o, u). 
+  Problem Statement: Query the list of *CITY* names starting with vowels (i.e., `a`, `e`, `i`, `o`, or `u`) from **STATION**. Your result *cannot* contain duplicates.
+  Constraints:  
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+SELECT DISTINCT City FROM Station
+WHERE SUBSTRING(LOWER(City), 1, 1) IN ('a','e','i','o','u')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 6
+  Slug: weather-observation-station-6
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names beginning with vowels (a, e, i, o, u). 
+  Problem Statement: Query the list of *CITY* names starting with vowels (i.e., `a`, `e`, `i`, `o`, or `u`) from **STATION**. Your result *cannot* contain duplicates.
+  Constraints:  
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+SELECT DISTINCT City FROM Station
+WHERE SUBSTRING(City, 1, 1) IN ('a','e','i','o','u')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 6
+  Slug: weather-observation-station-6
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names beginning with vowels (a, e, i, o, u). 
+  Problem Statement: Query the list of *CITY* names starting with vowels (i.e., `a`, `e`, `i`, `o`, or `u`) from **STATION**. Your result *cannot* contain duplicates.
+  Constraints:  
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+SELECT DISTINCT City FROM Station
+WHERE SUBSTRING(City, 1, 1) IN ('a','e','i','o','u','A','E','I','O','U')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 6
+  Slug: weather-observation-station-6
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of CITY names beginning with vowels (a, e, i, o, u). 
+  Problem Statement: Query the list of *CITY* names starting with vowels (i.e., `a`, `e`, `i`, `o`, or `u`) from **STATION**. Your result *cannot* contain duplicates.
+  Constraints:  
+  Input Format: The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where *LAT\_N* is the northern latitude and *LONG\_W* is the western longitude.
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+SELECT DISTINCT City FROM Station
+WHERE SUBSTRING(LOWER(City), 1, 1) IN ('a','e','i','o','u')
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 5
+  Slug: weather-observation-station-5
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Write a query to print the shortest and longest length city name along with the length of the city names.
+  Problem Statement: Query the two cities in **STATION** with the shortest and longest *CITY* names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.  
+The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitude.
+
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+(
+select City, LENGTH(City)
+    FROM Station
+    ORDER BY LENGTH(City) ASC, City ASC
+    LIMIT 1
+)
+UNION ALL
+(
+select City, LENGTH(City)
+    FROM Station
+    ORDER BY LENGTH(City) DESC, City ASC
+LIMIT 1
+)
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 4
+  Slug: weather-observation-station-4
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Find the number of duplicate CITY names in STATION.
+  Problem Statement: Find the difference between the total number of **CITY** entries in the table and the number of distinct **CITY** entries in the table.  
+The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitude.
+
+For example, if there are three records in the table with **CITY** values 'New York', 'New York', 'Bengalaru', there are 2 different city names: 'New York' and 'Bengalaru'.  The query returns $1$, because $\text{total number of records} - \text{number of unique city names} = 3 - 2 = 1$.
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+
+SELECT COUNT(City)-COUNT(DISTINCT City) FROM Station
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 3
+  Slug: weather-observation-station-3
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query a list of unique CITY names with even ID numbers.
+  Problem Statement: Query a list of **CITY** names from **STATION** for cities that have an even **ID** number. Print the results in any order, but exclude duplicates from the answer.  
+The **STATION** table is described as follows:
+
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitude.
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+/*
+Enter your query here.
+*/
+
+select distinct city from station where id % 2=0; 
+
+----------------------
+
+Question Details:
+
+  Title: Weather Observation Station 1
+  Slug: weather-observation-station-1
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Write a query to print the CITY and STATE for each attribute in the STATION table.
+  Problem Statement: Query a list of **CITY** and **STATE** from the **STATION** table.  
+The **STATION** table is described as follows:  
+<img src="https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg" title="Station.jpg" />
+
+where **LAT\_N** is the northern latitude and **LONG\_W** is the western longitude.
+  Constraints:  
+  Input Format:  
+  Output Format:   
+  
+My submission:
+/*
+Enter your query here.
+*/
+
+select city, state from station
+
+----------------------
+
+Question Details:
+
+  Title: Japanese Cities' Names
+  Slug: japanese-cities-name
+  Difficulty: Easy
+  Topics: N/A
+  Preview: In this challenge, you will query a list of all the Japanese cities' names. 
+  Problem Statement: Query the names of all the Japanese cities in the **CITY** table. The **COUNTRYCODE** for Japan is `JPN`.  
+The **CITY** table is described as follows:  
+<img src="https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg" title="CITY.jpg" />
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+SELECT Name FROM City WHERE CountryCode='JPN'
+
+----------------------
+
+Question Details:
+
+  Title: Japanese Cities' Attributes
+  Slug: japanese-cities-attributes
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the attributes of all the cities in Japan.
+  Problem Statement: Query all attributes of every Japanese city in the **CITY** table. The **COUNTRYCODE** for Japan is `JPN`.  
+
+The **CITY** table is described as follows:  
+<img src="https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg" title="CITY.jpg" />
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+SELECT * FROM City WHERE CountryCode='JPN'
+
+----------------------
+
+Question Details:
+
+  Title: Select By ID
+  Slug: select-by-id
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the details of the city with ID 1661.
+  Problem Statement: Query all columns for a city in **CITY** with the *ID* `1661`.
+
+The **CITY** table is described as follows:  
+<img src="https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg" title="CITY.jpg" />
+  Constraints:  
+  Input Format:  
+  Output Format:  
+  
+My submission:
+SELECT * FROM City WHERE Id = 1661
+
+----------------------
+
+Question Details:
+
+  Title: Select All
+  Slug: select-all-sql
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query all columns for every row in a table.
+  Problem Statement: Query all columns (attributes) for every row in the **CITY** table.
+
+The **CITY** table is described as follows:  
+![CITY.jpg](https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg)
+  Constraints:  
+  Input Format:  
+  Output Format:   
+  
+My submission:
+SELECT * FROM City
+
+----------------------
+
+Question Details:
+
+  Title: Revising the Select Query II
+  Slug: revising-the-select-query-2
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the city names for all American cities with populations larger than 120,000.
+  Problem Statement: Query the **NAME** field for all American cities in the **CITY** table with populations larger than `120000`. The *CountryCode* for America is `USA`. 
+
+The **CITY** table is described as follows:  
+![CITY.jpg](https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg)
+  Constraints:  
+  Input Format:  
+  Output Format:   
+  
+My submission:
+SELECT Name FROM City WHERE Population>120000 AND CountryCode='USA'
+
+----------------------
+
+Question Details:
+
+  Title: Revising the Select Query I
+  Slug: revising-the-select-query
+  Difficulty: Easy
+  Topics: N/A
+  Preview: Query the data for all American cities with populations larger than 100,000.
+  Problem Statement: Query all columns for all American cities in the **CITY** table with populations larger than `100000`. The **CountryCode** for America is `USA`. 
+
+The **CITY** table is described as follows:  
+
+![CITY.jpg](https://s3.amazonaws.com/hr-challenge-images/8137/1449729804-f21d187d0f-CITY.jpg)
+  Constraints:  
+  Input Format:  
+  Output Format:   
+  
+My submission:
+select * from City WHERE Population>100000 AND CountryCode='USA'
+
+----------------------
+
